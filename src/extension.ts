@@ -12,8 +12,6 @@ export function activate(context: vscode.ExtensionContext) {
 		provideDocumentFormattingEdits(document: vscode.TextDocument, options): Promise<vscode.TextEdit[]> {
 			const newLineSeparator = document.eol === vscode.EndOfLine.LF ? '\n' : '\r\n'
 
-			
-			console.log(document.eol);
 			const indent = options.insertSpaces ? ' '.repeat(options.tabSize) : '\t'
 			const formatted = nginxFormat(document.getText(), {
 				newLineSeparator,
