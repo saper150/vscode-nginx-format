@@ -13,10 +13,16 @@ export function activate(context: vscode.ExtensionContext) {
 			const newLineSeparator = document.eol === vscode.EndOfLine.LF ? '\n' : '\r\n'
 
 			const indent = options.insertSpaces ? ' '.repeat(options.tabSize) : '\t'
-			const formatted = nginxFormat(document.getText(), {
-				newLineSeparator,
-				indent: indent,
-			})
+			let formatted
+			try {
+				formatted = nginxFormat(document.getText(), {
+					newLineSeparator,
+					indent: indent,
+				})
+			} catch (err) {
+				throw new Error('File has syntax errors')
+			}
+
 			const fileStart = new vscode.Position(0, 0);
 			const fileEnd = document.lineAt(document.lineCount - 1).range.end;
 
