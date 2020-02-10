@@ -15,7 +15,9 @@
 		"onLanguage:nginx"
 	],
 	"license": "MIT",
-	"extensionDependencies": ["william-voyek.vscode-nginx"],
+	"extensionDependencies": [
+		"william-voyek.vscode-nginx"
+	],
 	"main": "./dist/extension.js",
 	"publisher": "teclado",
 	"contributes": {},
@@ -44,6 +46,6 @@
 		"webpack-cli": "^3.3.10"
 	},
 	"dependencies": {
-		"nginx-format": "^0.1.3"
+		"nginx-format": "^0.1.4"
 	}
 }
