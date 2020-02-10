@@ -2,7 +2,7 @@
 	"name": "vscode-nginx-format",
 	"displayName": "nginx-format",
 	"description": "formatter for nginx config files",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -26,6 +26,7 @@
 	"scripts": {
 		"bundle": "webpack --mode production",
 		"vscode:prepublish": "npm run bundle",
+		"publish": "vsce publish",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
 		"postinstall": "node ./node_modules/vscode/bin/install",
