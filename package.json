@@ -14,6 +14,8 @@
 		"onLanguage:NGINX Conf",
 		"onLanguage:nginx"
 	],
+	"license": "MIT",
+	"extensionDependencies": ["william-voyek.vscode-nginx"],
 	"main": "./dist/extension.js",
 	"publisher": "teclado",
 	"contributes": {},
