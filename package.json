@@ -2,7 +2,7 @@
 	"name": "vscode-nginx-format",
 	"displayName": "nginx-format",
 	"description": "formatter for nginx config files",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
